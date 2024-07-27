@@ -35,3 +35,5 @@ function performSearch() {
             }
         });
 }
+// Event listener for search button click
+searchButton.addEventListener('click', performSearch);
