@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+#drinkList, #viewedHistory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.drink-card, .history-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+.drink-card img, .history-card img {
+    width: 100%;
+}
+#drinkDetail {
+    margin-top: 20px;
+}
+#clearHistoryButton {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#clearHistoryButton:hover {
+    background-color: #d32f2f;
+}
