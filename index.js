@@ -14,3 +14,4 @@ function fetchData() {
 
 // Select the input, button, and various divs from the DOM
 const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
