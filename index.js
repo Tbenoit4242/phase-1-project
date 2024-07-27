@@ -21,3 +21,17 @@ const viewedHistory = document.getElementById('viewedHistory');
 const clearHistoryButton = document.getElementById('clearHistoryButton');
 
 let viewedDrinks = [];
+
+// Function to perform search based on the search term entered by the user
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase();  // Get the search term and convert to lowercase
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchTerm}`)  // Fetch drinks matching the search term
+        .then((resp) => resp.json())
+        .then((data) => {
+            if (data.drinks) {
+                displayDrinks(data.drinks);  // Display the drinks if found
+            } else {
+                drinkList.innerHTML = '<p>No drinks found</p>';  // Show message if no drinks are found
+            }
+        });
+}
