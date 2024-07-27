@@ -18,3 +18,4 @@ const searchButton = document.getElementById('searchButton');
 const drinkList = document.getElementById('drinkList');
 const drinkDetail = document.getElementById('drinkDetail');
 const viewedHistory = document.getElementById('viewedHistory');
+const clearHistoryButton = document.getElementById('clearHistoryButton');
