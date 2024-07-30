@@ -20,6 +20,7 @@ const drinkDetail = document.getElementById('drinkDetail');
 const viewedHistory = document.getElementById('viewedHistory');
 const clearHistoryButton = document.getElementById('clearHistoryButton');
 
+// Initialize an array to keep track of viewed drinks
 let viewedDrinks = [];
 
 // Function to perform search based on the search term entered by the user
@@ -35,6 +36,7 @@ function performSearch() {
             }
         });
 }
+
 // Event listener for search button click
 searchButton.addEventListener('click', performSearch);
 
@@ -44,11 +46,13 @@ searchInput.addEventListener('keydown', (event) => {
         performSearch();
     }
 });
+
 // Event listener for clearing the viewed history
 clearHistoryButton.addEventListener('click', () => {
     viewedDrinks = [];  // Clear the viewed drinks array
     updateViewedHistory();  // Update the viewed history display
 });
+
 // Function to display a list of drinks
 function displayDrinks(drinks) {
     drinkList.innerHTML = '';  // Clear the current list of drinks
@@ -66,6 +70,7 @@ function displayDrinks(drinks) {
         drinkList.appendChild(drinkCard);  // Add the drink card to the drink list
     });
 }
+
 // Function to display detailed information about a drink
 function displayDrinkDetail(drink) {
     drinkDetail.innerHTML = `
@@ -80,6 +85,7 @@ function displayDrinkDetail(drink) {
         </ul>
     `;
 }
+
 // Function to generate a list of ingredients for a drink
 function getIngredientsList(drink) {
     let ingredients = '';
@@ -91,4 +97,27 @@ function getIngredientsList(drink) {
         }
     }
     return ingredients;  // Return the generated list of ingredients
+}
+
+// Function to add a drink to the viewed history if not already viewed
+function addToViewedHistory(drink) {
+    if (!viewedDrinks.some(d => d.idDrink === drink.idDrink)) {
+        viewedDrinks.push(drink);  // Add the drink to the history
+        updateViewedHistory();  // Update the history display
+    }
+}
+
+// Function to update the viewed history display
+function updateViewedHistory() {
+    viewedHistory.innerHTML = '';  // Clear the current history display
+    viewedDrinks.forEach(drink => {
+        const historyCard = document.createElement('div');  // Create a div for each viewed drink
+        historyCard.classList.add('history-card');  // Add class for styling
+        historyCard.innerHTML = `
+            <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+            <h3>${drink.strDrink}</h3>
+        `;
+        historyCard.addEventListener('click', () => displayDrinkDetail(drink));  // Display drink details when clicked
+        viewedHistory.appendChild(historyCard);  // Add the history card to the history display
+    });
 }
