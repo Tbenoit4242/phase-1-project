@@ -1,4 +1,9 @@
 body {
+    background-color: #87CEFA;; /* Sets the background color of the entire page to blue */
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
@@ -8,7 +13,7 @@ body {
     gap: 20px;
 }
 .drink-card, .history-card {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 10px;
     width: 200px;
     cursor: pointer;
