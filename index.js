@@ -44,3 +44,8 @@ searchInput.addEventListener('keydown', (event) => {
         performSearch();
     }
 });
+// Event listener for clearing the viewed history
+clearHistoryButton.addEventListener('click', () => {
+    viewedDrinks = [];  // Clear the viewed drinks array
+    updateViewedHistory();  // Update the viewed history display
+});
