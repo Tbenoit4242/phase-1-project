@@ -66,3 +66,17 @@ function displayDrinks(drinks) {
         drinkList.appendChild(drinkCard);  // Add the drink card to the drink list
     });
 }
+// Function to display detailed information about a drink
+function displayDrinkDetail(drink) {
+    drinkDetail.innerHTML = `
+        <h2>${drink.strDrink}</h2>
+        <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+        <p><strong>Category:</strong> ${drink.strCategory}</p>
+        <p><strong>Glass:</strong> ${drink.strGlass}</p>
+        <p><strong>Instructions:</strong> ${drink.strInstructions}</p>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+            ${getIngredientsList(drink)}
+        </ul>
+    `;
+}
