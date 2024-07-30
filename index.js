@@ -61,7 +61,7 @@ function displayDrinks(drinks) {
         `;
         drinkCard.addEventListener('click', () => {
             displayDrinkDetail(drink);  // Display drink details when clicked
-            
+            addToViewedHistory(drink);  // Add drink to viewed history
         });
         drinkList.appendChild(drinkCard);  // Add the drink card to the drink list
     });
