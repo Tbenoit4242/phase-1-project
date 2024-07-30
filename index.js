@@ -80,3 +80,15 @@ function displayDrinkDetail(drink) {
         </ul>
     `;
 }
+// Function to generate a list of ingredients for a drink
+function getIngredientsList(drink) {
+    let ingredients = '';
+    for (let i = 1; i <= 15; i++) {  // Iterate over possible ingredient and measure pairs
+        const ingredient = drink[`strIngredient${i}`];
+        const measure = drink[`strMeasure${i}`];
+        if (ingredient) {
+            ingredients += `<li>${measure ? measure : ''} ${ingredient}</li>`;
+        }
+    }
+    return ingredients;  // Return the generated list of ingredients
+}
