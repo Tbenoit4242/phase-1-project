@@ -1,29 +1,34 @@
 body {
-    background-color: #87CEFA;; /* Sets the background color of the entire page to blue */
-    font-family: Arial, sans-serif;
-    margin: 10px;
-}
-body {
+    background-color: #1E90FF; /* Dodger Blue background */
     font-family: Arial, sans-serif;
     margin: 20px;
 }
+
+#searchContainer {
+    margin-top: 20px; /* Adjust this value to move the container up */
+}
+
 #drinkList, #viewedHistory {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .drink-card, .history-card {
-    border: 1px solid #000000;
+    border: 1px solid #000000; /* Black border */
     padding: 10px;
     width: 200px;
     cursor: pointer;
 }
+
 .drink-card img, .history-card img {
     width: 100%;
 }
+
 #drinkDetail {
     margin-top: 20px;
 }
+
 #clearHistoryButton {
     margin: 10px 0;
     padding: 10px;
@@ -32,6 +37,7 @@ body {
     border: none;
     cursor: pointer;
 }
+
 #clearHistoryButton:hover {
     background-color: #d32f2f;
 }
