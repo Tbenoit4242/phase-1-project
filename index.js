@@ -49,3 +49,20 @@ clearHistoryButton.addEventListener('click', () => {
     viewedDrinks = [];  // Clear the viewed drinks array
     updateViewedHistory();  // Update the viewed history display
 });
+// Function to display a list of drinks
+function displayDrinks(drinks) {
+    drinkList.innerHTML = '';  // Clear the current list of drinks
+    drinks.forEach(drink => {
+        const drinkCard = document.createElement('div');  // Create a div for each drink
+        drinkCard.classList.add('drink-card');  // Add class for styling
+        drinkCard.innerHTML = `
+            <img src="${drink.strDrinkThumb}" alt="${drink.strDrink}">
+            <h3>${drink.strDrink}</h3>
+        `;
+        drinkCard.addEventListener('click', () => {
+            displayDrinkDetail(drink);  // Display drink details when clicked
+            
+        });
+        drinkList.appendChild(drinkCard);  // Add the drink card to the drink list
+    });
+}
