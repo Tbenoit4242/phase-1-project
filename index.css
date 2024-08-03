@@ -3,9 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
-
+h1 {
+    margin-top: 20px; /* Move the title down */
+    text-align: center; /* Center the title horizontally */
+}
 #searchContainer {
-    margin-top: 20px; /* Adjust this value to move the container up */
+    margin-top: 30px; /* Adjust this value to move the container up */
+    margin-left: 820px;
+
 }
 
 #drinkList, #viewedHistory {
@@ -19,6 +24,7 @@ body {
     padding: 10px;
     width: 200px;
     cursor: pointer;
+    margin-left: 70px
 }
 
 .drink-card img, .history-card img {
