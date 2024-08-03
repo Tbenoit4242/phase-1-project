@@ -2,7 +2,15 @@ body {
     background-color: #1E90FF; /* Dodger Blue background */
     font-family: Arial, sans-serif;
     margin: 20px;
+    padding: 0;
+    margin: 0;
+    background-image: url(https://img.freepik.com/free-photo/fresh-cocktails-with-ice-lemon-lime-fruits-generative-ai_188544-12370.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1722643200&semt=sph); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
+
 h1 {
     margin-top: 20px; /* Move the title down */
     text-align: center; /* Center the title horizontally */
@@ -21,10 +29,12 @@ h1 {
 
 .drink-card, .history-card {
     border: 1px solid #000000; /* Black border */
-    padding: 10px;
+    padding: 50px;
     width: 200px;
     cursor: pointer;
-    margin-left: 70px
+    margin-left: 60px;
+    background-color:white;
+    
 }
 
 .drink-card img, .history-card img {
@@ -33,8 +43,13 @@ h1 {
 
 #drinkDetail {
     margin-top: 20px;
+    background-color: white;
+    padding: 10px; /* Add padding for spacing inside the box */
+    width: 300px; /* Set a specific width for the box */
+     /* Center the box horizontally */
+    border: 1px solid #000; /* Add a border for better visibility */
+ 
 }
-
 #clearHistoryButton {
     margin: 10px 0;
     padding: 10px;

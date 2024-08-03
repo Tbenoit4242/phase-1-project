@@ -84,6 +84,7 @@ function displayDrinkDetail(drink) {
             ${getIngredientsList(drink)}
         </ul>
     `;
+   
 }
 
 // Function to generate a list of ingredients for a drink
