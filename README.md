@@ -26,4 +26,10 @@ This project is a Single Page Application (SPA) built using HTML, CSS, and JavaS
 -  **Step 2** Fork and clone from github and copy the ssh url git@github.com:Tbenoit4242/phase-1-project.git.
 -  **Step 3** From your terminal enter code . to open visual studio or whatever your using to code and your ready to go!
    
-   
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Please make sure to update tests as appropriate.
+
+## License
+MIT
